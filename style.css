@@ -1,0 +1,112 @@
+:root{
+  --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --white-color: rgb(255, 255, 255);
+  --gray-color: gainsboro;
+  --primary-color: rgb(45, 45, 253);
+  --accent-color: rgb(255, 201, 39);
+}
+
+body{
+  background-color: var(--gray-color);
+  font-family: var(--font);
+  margin: 0;
+}
+
+h3,h2,p,h4{
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: .6fr 2fr 1fr;
+}
+
+.grid > *{
+  padding: 0 10px;
+}
+.main,.announce,.trend{
+  padding-top: 20px;
+}
+
+.header{
+  grid-column: 2/4;
+  grid-row: 1;
+  background-color: var(--white-color);
+}
+.logo{
+  display: flex;
+  justify-self: left;
+}
+.logo img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px black solid;
+}
+
+.sidebar{
+  grid-column: 1;
+  grid-row: 1/4;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.sidebar a{
+  color: inherit;
+}
+
+.main{
+  grid-column: 2/3;
+}
+.card-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.card{
+  display: flex;
+  background-color: var(--white-color);
+  min-width: 250px;
+  min-height: 200px;
+  border-radius: 10px;
+}
+.card > :first-child{
+  padding: 0;
+  width: 10%;
+  height: inherit;
+  background-color: var(--accent-color);
+  border-radius: 10px 0px 0px 10px;
+}
+.card > *{
+  padding: 20px 10px;
+}
+
+ul{
+  list-style-type: none;
+  gap: 10px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button{
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  font: inherit;
+  border: none;
+}
+
+.footer{
+  grid-column: 2/4;
+  grid-row: 4;
+  background-color: var(--white-color);
+}
